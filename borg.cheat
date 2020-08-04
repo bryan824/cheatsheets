@@ -1,0 +1,16 @@
+% borg, backup
+
+# Delete archive
+borg delete --remote-path borg1 <server>:<repo_name>::<archive_name>
+
+# Delete repo
+borg delete --remote-path borg1 <server>:<repo_name>
+
+# Mount archive
+borg mount --remote-path borg1 <server>:<repo_name>::<arcive_name> <mount_path>
+
+# Unmount archive
+borg umount --remote-path borg1 <mount_path>
+
+# Extract (always current directory)
+borg extract <server>:<repo_name>::<arcive_name> <extract_path>

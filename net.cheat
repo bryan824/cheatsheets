@@ -1,0 +1,4 @@
+% lsof, port
+
+# Check port
+lsof -iTCP -sTCP:LISTEN -P

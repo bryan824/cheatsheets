@@ -1,0 +1,4 @@
+% npm
+
+# npm list global packages
+ npm list -g --depth 0

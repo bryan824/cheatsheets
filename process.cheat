@@ -1,0 +1,2 @@
+# check process
+ps aux | grep <process_name>

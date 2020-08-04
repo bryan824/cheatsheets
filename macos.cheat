@@ -1,0 +1,5 @@
+% macOS
+
+# sign an application
+sudo xattr -cr /Applications/<App_Name>.app
+sudo codesign --force --deep --sign - /Applications/<App_Name>.app

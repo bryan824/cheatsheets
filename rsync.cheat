@@ -1,0 +1,16 @@
+% copy, upload, rsync
+
+# Copy file (-P: --partial --progress, -v: --verbose, -a: archive mode, preserve UID/GID and symlinks, -E: hard-links, extended attributes) macOS
+rsync -avPHE <SRC> <DEST>
+
+# Copy file (-P: --partial --progress, -v: --verbose, -a: archive mode, preserve UID/GID and symlinks, -E: hard-links, extended attributes) Linux
+rsync -avPHAX <SRC> <DEST>
+
+# Copy file using ssh (as secure as scp) macOS
+rsync -avPH -e ssh <SRC> "<server>:<DEST>"
+
+# Copy file using ssh (as secure as scp) Linux
+rsync -avPHAX -e ssh "<SRC>" "<server>:<DEST>"
+
+# Delete folder with large numbers of files
+mkdir empty && rsync -r --delete empty/ <TARGET> && rmdir <TARGET> empty

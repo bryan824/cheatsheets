@@ -1,0 +1,2 @@
+# Copy shared-with-me file
+nohup rclone copy --drive-shared-with-me -v gbryan:<foldername> . > rclone.log

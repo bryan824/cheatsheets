@@ -1,0 +1,7 @@
+% ssh, key
+
+# Append public key
+ cat <public_key> | ssh <server> 'dd of=.ssh/authorized_keys oflag=append conv=notrunc'
+
+ # Generate SSH key using ed25519 algorithm
+ ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519

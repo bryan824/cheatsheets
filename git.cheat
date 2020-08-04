@@ -1,0 +1,10 @@
+% git
+
+# regenerate hash (error: Error building trees)
+git hash-object -w <file>
+
+# delete local branch
+git branch -d <branch>
+
+# delete remote branch
+git push -d <remote> <branch>

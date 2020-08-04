@@ -1,0 +1,19 @@
+% ffmpeg
+
+# Extract audio from video
+ffmpeg -i <input_video> -vn -acodec copy <output_audio>
+
+# Extract audio from video and convert format
+ffmpeg -i <input_video> -f <output_format> -ab 192000 -vn <output_audio>
+
+# Convert audio format
+ffmpeg -i <input_audio> -c:a aac -b:a 192k <output_audio>
+
+# Convert audio inside of video
+ffmpeg -i <input_video> -c:v copy -c:a aac <output_video>
+
+# Download m3u8
+ffmpeg -i <m3u8_url> -c copy <output_name>
+
+# Combine two streams together
+ffmpeg -i <input_video> -i <input_audio> -shortest -c:v copy -c:a aac -b:a 256k <output_video>

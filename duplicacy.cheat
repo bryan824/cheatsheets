@@ -1,0 +1,8 @@
+# check backup
+duplicacy check -a -tabular -storage <storage_name>
+
+# copy backup
+duplicacy -log copy -from <source_storage_name> -to <destination_storage_name> -threads 2
+
+# add backup
+duplicacy add -e -copy <source_storage_name> -repository <repo> --bit-identical <destination_storage_name> <snap_id> <destination_storage>

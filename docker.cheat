@@ -1,0 +1,10 @@
+% docker, docker-compose
+
+# rebuild one single service
+docker-compose up -d --force-recreate --build <container>
+
+# enable xhyve
+sudo chown root:wheel $(which docker-machine-driver-xhyve) && sudo chmod u+s $(which docker-machine-driver-xhyve) && docker-machine create default -d xhyve
+
+# create external network
+docker network create --subnet=172.16.1.0/24 <network_name>

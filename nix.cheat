@@ -1,0 +1,4 @@
+% nix
+
+# fetchFromGithub
+nix-prefetch-git <github_url>
